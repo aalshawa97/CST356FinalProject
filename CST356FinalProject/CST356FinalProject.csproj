@@ -201,6 +201,9 @@
     <Content Include="Views\UserAccount\Login.cshtml" />
     <Content Include="Views\UserAccount\LoggedIn.cshtml" />
     <Content Include="Views\UserAccount\Index.cshtml" />
+    <Content Include="Views\UserAccount\Delete.cshtml" />
+    <Content Include="Views\UserAccount\Details.cshtml" />
+    <Content Include="Views\UserAccount\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

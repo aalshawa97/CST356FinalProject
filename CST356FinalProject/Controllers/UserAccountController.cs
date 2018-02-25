@@ -82,5 +82,32 @@ namespace CST356FinalProject.Controllers
         return RedirectToAction("Login");
       }
     }
+
+    public ActionResult Delete(int id)
+    {
+      DeleteUser(id);
+
+      return RedirectToAction("List");
+    }
+
+    private void DeleteUser(int id)
+    {
+      UserAccount account;
+      if (ModelState.IsValid)
+      {
+        using (ADbContext db = new ADbContext())
+        {
+          account = db.UserAccounts.Find(id);
+          db.UserAccounts.Remove(account);
+          db.SaveChanges();
+        }
+
+        //Clear the contents of all input controls
+        ModelState.Clear();
+
+        ViewBag.Message = account.FirstName + " " + account.LastName + "succesfully registered.";
+      }
+
+    }
   }
 }
