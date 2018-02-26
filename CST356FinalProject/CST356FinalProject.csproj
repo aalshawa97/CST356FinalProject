@@ -158,6 +158,7 @@
     <Compile Include="Data\ADbContext.cs" />
     <Compile Include="Models\View\BankAccountViewModel.cs" />
     <Compile Include="Data\Entities\UserAccount.cs" />
+    <Compile Include="Models\View\UserAccountViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
