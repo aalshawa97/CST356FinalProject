@@ -24,7 +24,8 @@
                     @if (Session["UserId"] != null)
                     {
                         @Html.ActionLink("Hello " + @Session["Username"].ToString() + "!", "Hello " + @Session["Username"].ToString() + "!", "Manage", routeValues: null, htmlAttributes: new {title = "Manage"})
-                        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                        <li><a href= "Logout.cshtml">Log off</a></li>
+                       
                     }
                     else
                     {

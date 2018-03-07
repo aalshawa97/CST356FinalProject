@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using CST356FinalProject.Models;
+using Microsoft.AspNet.Identity;
 
 namespace CST356FinalProject.Controllers
 {
@@ -42,6 +44,18 @@ namespace CST356FinalProject.Controllers
       }
       return View();
     }
+
+    /*
+    //
+    // POST: /Account/LogOff
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public ActionResult LogOff()
+    {
+      AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+      return RedirectToAction("Index", "Home");
+    }
+    */
 
     //User login
     public ActionResult Login()

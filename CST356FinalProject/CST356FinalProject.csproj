@@ -229,6 +229,7 @@
     <Content Include="Views\UserAccount\Delete.cshtml" />
     <Content Include="Views\UserAccount\Details.cshtml" />
     <Content Include="Views\UserAccount\List.cshtml" />
+    <Content Include="Views\UserAccount\Logoff.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
