@@ -1,22 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CST356FinalProject.Data.Entities;
 using CST356FinalProject.Models;
 using CST356FinalProject.Models.View;
+using Microsoft.AspNet.Identity;
 
 namespace CST356FinalProject.Controllers
 {
     public class BankAccountController : Controller
     {
       //List the bank accounts associated with the user
-      public ActionResult List(int userId)
+      public ActionResult List()
       {
+        var userId = Session["Username"].ToString();
         ViewBag.UserId = userId;
-
-        var bankAccounts = GetBankAccountsForUser(userId);
+        
+        var bankAccounts = GetBankAccountsForUser(Int32.Parse(userId));
 
         return View(bankAccounts);
       }
