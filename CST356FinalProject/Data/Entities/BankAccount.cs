@@ -9,7 +9,7 @@ namespace CST356FinalProject.Data.Entities
 {
   public class BankAccount
   {
-    [Key]
+    [Key, Required]
     public int Id { get; set; }
 
     public string AccountNumber { get; set; }

@@ -31,7 +31,7 @@ namespace CST356FinalProject.Controllers
 
         var dbContext = new ADbContext();
 
-        var bankAccounts = dbContext.BankAccounts.Where(pet => pet.UserId == userId).ToList();
+        var bankAccounts = dbContext.BankAccounts.Where(userAccount => userAccount.UserId == userId).ToList();
 
         foreach (var bankAccount in bankAccounts)
         {

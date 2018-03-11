@@ -18,7 +18,7 @@ namespace CST356FinalProject.Controllers
       {
         return View(db.UserAccounts.ToList());
       }
-      return View();
+
     }
 
     public ActionResult Register()

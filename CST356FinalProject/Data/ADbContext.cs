@@ -12,6 +12,7 @@ namespace CST356FinalProject.Models
     public ADbContext()
     {
       this.Configuration.LazyLoadingEnabled = false;
+
     }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -21,6 +22,7 @@ namespace CST356FinalProject.Models
 
     public  virtual DbSet<UserAccount> UserAccounts { get; set; }
     public virtual DbSet<BankAccount> BankAccounts { get; set; }
+    public virtual DbSet<UsersOfAccount> UsersOfAccounts { get; set; }
 
     public class AppDbInitializer : DropCreateDatabaseIfModelChanges<ADbContext>
     {

@@ -175,7 +175,9 @@
     <Compile Include="Controllers\BankAccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserAccountController.cs" />
+    <Compile Include="Controllers\UsersOfAccountController.cs" />
     <Compile Include="Data\Entities\BankAccount.cs" />
+    <Compile Include="Data\Entities\UsersOfAccount.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,6 +185,7 @@
     <Compile Include="Models\View\BankAccountViewModel.cs" />
     <Compile Include="Data\Entities\UserAccount.cs" />
     <Compile Include="Models\View\UserAccountViewModel.cs" />
+    <Compile Include="Models\View\UsersOfAccountViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -232,6 +235,7 @@
     <Content Include="Views\UserAccount\List.cshtml" />
     <Content Include="Views\UserAccount\Logoff.cshtml" />
     <Content Include="Views\BankAccount\List.cshtml" />
+    <Content Include="Views\BankAccount\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
