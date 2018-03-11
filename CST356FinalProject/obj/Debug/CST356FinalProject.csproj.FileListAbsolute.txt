@@ -85,7 +85,6 @@ C:\Users\aalshawa\Documents\GitHub\CST356FinalProject\CST356FinalProject\bin\Mic
 C:\Users\aalshawa\Documents\GitHub\CST356FinalProject\CST356FinalProject\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\aalshawa\Documents\GitHub\CST356FinalProject\CST356FinalProject\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\aalshawa\Documents\GitHub\CST356FinalProject\CST356FinalProject\bin\Microsoft.AI.Web.xml
-C:\Users\aalshawa\Documents\GitHub\CST356FinalProject\CST356FinalProject\obj\Debug\CST356FinalProject.csprojResolveAssemblyReference.cache
 C:\Users\aalshawa\Documents\GitHub\CST356FinalProject\CST356FinalProject\obj\Debug\CST356FinalProject.csproj.CoreCompileInputs.cache
 C:\Users\aalshawa\Documents\GitHub\CST356FinalProject\CST356FinalProject\obj\Debug\CST356FinalProject.dll
 C:\Users\aalshawa\Documents\GitHub\CST356FinalProject\CST356FinalProject\obj\Debug\CST356FinalProject.pdb

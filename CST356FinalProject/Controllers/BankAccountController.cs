@@ -18,8 +18,9 @@ namespace CST356FinalProject.Controllers
       {
         var userId = Session["Username"].ToString();
         ViewBag.UserId = userId;
-        
-        var bankAccounts = GetBankAccountsForUser(Int32.Parse(userId));
+        int userIdInteger;
+         int.TryParse(userId,out userIdInteger);
+        var bankAccounts = GetBankAccountsForUser(userIdInteger);
 
         return View(bankAccounts);
       }
@@ -64,7 +65,15 @@ namespace CST356FinalProject.Controllers
       [HttpGet]
       public ActionResult Create(int userId)
       {
-        ViewBag.UserId = userId;
+        try
+        {
+          ViewBag.UserId = userId;
+        }
+        catch (Exception e)
+        {
+          Console.WriteLine(e);
+          throw;
+        }
 
         return View();
       }
@@ -72,10 +81,18 @@ namespace CST356FinalProject.Controllers
       [HttpPost]
       public ActionResult Create(BankAccountViewModel bankAccountViewModel)
       {
-        if (ModelState.IsValid)
+        try
         {
-          Save(bankAccountViewModel);
-          return RedirectToAction("List", new { bankAccountViewModel.UserId });
+          if (ModelState.IsValid)
+          {
+            Save(bankAccountViewModel);
+            return RedirectToAction("List", new { bankAccountViewModel.UserId });
+          }
+        }
+        catch (Exception e)
+        {
+          Console.WriteLine(e);
+          throw;
         }
 
         return View();
