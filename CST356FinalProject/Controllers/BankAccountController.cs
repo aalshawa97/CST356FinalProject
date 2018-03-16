@@ -62,9 +62,10 @@ namespace CST356FinalProject.Controllers
         };
       }
 
+     /*
       [HttpGet]
-      public ActionResult Create(int userId)
-      {
+      public ActionResult Create(int userId) 
+        {
         try
         {
           ViewBag.UserId = userId;
@@ -77,8 +78,29 @@ namespace CST356FinalProject.Controllers
 
         return View();
       }
+      */
 
-      [HttpPost]
+        [HttpGet]
+        public ActionResult Create()
+        {
+            try
+            {
+                if(ViewBag.UserId == null)
+                {
+                    ViewBag.UserId = @Session["Username"].ToString();
+                }
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+            return View();
+        }
+
+        [HttpPost]
       public ActionResult Create(BankAccountViewModel bankAccountViewModel)
       {
         try
